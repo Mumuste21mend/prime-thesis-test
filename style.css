@@ -205,7 +205,7 @@ position: relative;
     padding-left: 20px;
 }
 .main-page{
-    height: 1392px;
+    height: 1265px;
     width: 100%;
     overflow: hidden;
 }
@@ -229,7 +229,10 @@ position: relative;
 .main-page__container{
     margin-top: 200px;
     margin-left: 280px;
+    margin-right:auto;
+    margin-bottom:0;
     display:flex;
+    width:fit-content;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -260,15 +263,15 @@ position: relative;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    margin-top: 4rem;
+    margin-top: 4.0625rem;
 }
 
 .main-page__primary--buttons{
     background:transparent;
     width:260px ;
     height:5rem ;
-    margin-top: 10rem;
-    margin:1rem ;
+    /* margin-top: 10rem; */
+    margin:0 1rem  ;
     margin-left:0 ;
     padding:1rem;
     font-size: 20px;
@@ -295,7 +298,7 @@ position: relative;
 /* up animation  */
 .up:hover,
 .up:focus {
-  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+  box-shadow: inset 0 -3.25em 0 0 var();
 }
 
 .main-page__card-blur {
@@ -304,8 +307,8 @@ position: relative;
     position: absolute;
      /* background-color:rgba(80, 80, 80, 0.0); */
     backdrop-filter: blur(8px) saturate(100%) contrast(90%) brightness(80%); 
-    /* border: 0.5px solid rgba(80, 80, 80, 0.2) ; */
-    border-radius: 10px;
+    border: 0.5px solid rgba(80, 80, 80,0.8) ;
+    border-radius: 10px 10px 0 0;
     height: 600px;
     width: 450px;
     transition: all 0.s;
@@ -320,8 +323,9 @@ position: relative;
     left:0;
     background-color: rgba(80, 80, 80, 0.1);
     backdrop-filter: blur(10px) saturate(100%) contrast(90%) brightness(80%);
-    border: 0.5px solid rgba(24, 13, 13, 0.2) ;
-    border-radius: 10px;
+    /* border: 1px solid rgba(24, 13, 13, 0.2) ; */
+    border:none;
+    border-radius: 10px 10px 0 0;
     height: 600px;
     width: 450px;
     transition: all 0.25s;
@@ -336,7 +340,10 @@ position: relative;
     opacity: 1;
     background-color:var(--pink);
     transition: all 0.25s;
-    border: 0.5px solid var(--pink) ;
+    border: none;
+    border-radius: 10px 10px 0 0;
+
+    /* border: 0.5px solid var(--pink) ; */
     
 }
 .main-page__container__secondary{
@@ -388,7 +395,7 @@ position: relative;
     margin-left:2.5rem;
     font-size: 2em;
 
-}
+}box-shadow
 ul.main-page__container__card__list {
     display: flex;
     flex-direction: column;
@@ -414,3 +421,93 @@ ul.main-page__container__card__list li:before {
     padding: 0 6px 0 0;
 }
 
+
+/* Price page  */
+.price-page{
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:stretch;
+    align-content: center;
+    margin-top: 0rem;
+    width: 100%;
+}
+
+.price-page__container--1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 43.75rem;
+    width: 100%;
+    background-color: #F5F5F5;
+}
+.price-page__1__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.price-page__1__text--header{
+    color: #000;
+    font-size: 3.625rem;
+    position: relative;
+}
+
+.price-page__1__text--header::after{
+    content: '';
+    height: 5px;
+    width: 40%;
+    background-color: var(--pink);
+    position: absolute;
+    bottom: -3px;
+    left: 40%;
+    transform: translatex(-50%);
+    color: #000;
+    font-size: 3.625rem;
+}
+.price-page__1__text--sentence{
+    margin-top: 3.75rem;
+    font-weight: normal;
+    font-size: 2.25rem;
+    color:var(--pink);
+}
+.price-page__container--2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    height: 51rem;
+    width: 100%;
+    margin-top:6rem;
+    position: relative;
+}
+
+
+.price-page__container--2::after{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+    height: 51rem;
+    width: 100%;
+    background-color: #F5F5F5;
+    opacity: 24%;
+}
+
+.price-page__2__pricing-container{
+    position: relative;
+    top:-15.625rem;
+    border:rgba(80, 80, 80,0.2) 0.5px solid;
+    box-shadow: rgba(80, 80, 80,0.2);
+    box-shadow: 0 10px 10px 5px  rgba(0,0,0, 0.2);
+    
+    width: 72.25%;
+    height: 21.875rem;
+    background-color: #FFF;
+    border-radius: 10px;
+}
