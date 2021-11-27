@@ -395,7 +395,7 @@ position: relative;
     margin-left:2.5rem;
     font-size: 2em;
 
-}box-shadow
+}
 ul.main-page__container__card__list {
     display: flex;
     flex-direction: column;
@@ -500,12 +500,19 @@ ul.main-page__container__card__list li:before {
 }
 
 .price-page__2__pricing-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.price-page__2__pricing-header__container{
     position: relative;
     top:-15.625rem;
-    border:rgba(80, 80, 80,0.2) 0.5px solid;
-    box-shadow: rgba(80, 80, 80,0.2);
-    box-shadow: 0 10px 10px 5px  rgba(0,0,0, 0.2);
-    
+
+    box-shadow: 0 0 20px 10px  rgba(0,0,0, 0.1);
     width: 72.25%;
     height: 21.875rem;
     background-color: #FFF;
